@@ -1,0 +1,80 @@
+.taskItemContainer {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  padding: 16px;
+  gap: 12px;
+  width: 100%;
+  position: relative;
+  border: 1px solid var(--gray-500);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  place-content: center;
+  place-items: flex-start;
+  background: var(--gray-500);
+}
+.checkContainer {
+  position: relative;
+}
+
+/* .checkContainer:hover input + .checkMark {
+  background-color: var(--blue);
+} */
+.checkContainer input:checked + .checkMark {
+  border: 2px solid var(--purple);
+  background-color: var(--purple);
+}
+.checkContainer input + .checkMark {
+  border: 2px solid var(--blue);
+}
+
+.checkContainer input:checked ~ .checkMark:after {
+  display: block;
+}
+.checkContainer input {
+  display: none;
+}
+
+.checkMark {
+  position: relative;
+  display: block;
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+  border-radius: 100%;
+  margin-top: 4px;
+}
+
+.checkMark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 7px;
+  top: 3.8px;
+  width: 3px;
+  height: 6px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.title {
+  width: 100%;
+  max-width: 100%;
+  word-break: break-all;
+  margin-top: 4px;
+}
+.completed {
+  text-decoration: line-through;
+  color: var(--gray-300);
+}
+.trashIcon {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  cursor: pointer;
+}
+.trashIcon:hover {
+  background-color: var(--gray-400);
+  color: var(--danger);
+  border-radius: 4px;
+}

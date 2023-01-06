@@ -1,0 +1,44 @@
+.textField {
+  display: flex;
+  gap: 8px;
+  max-width: 740px;
+  margin: auto;
+  padding: 10px 10px 0 10px;
+  transform: translateY(-50%);
+}
+.textField input {
+  color: var(--gray-300);
+  border-radius: 5px;
+  background: var(--gray-500);
+  border: 1px solid var(--gray-700);
+  padding: 1rem;
+  width: 100%;
+}
+
+.textField input:focus {
+  color: var(--white);
+  outline: 1px solid var(--PurpleDark);
+}
+
+.textField button {
+  color: var(--gray-100);
+  border-radius: 5px;
+  background: var(--blueDark);
+  padding: 1rem;
+  width: 100px;
+  border: none;
+  cursor: pointer;
+}
+.plusIcon {
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+@media (max-width: 1024px) {
+  .textField {
+    flex-direction: column;
+  }
+  .textField button {
+    width: 100%;
+  }
+}
